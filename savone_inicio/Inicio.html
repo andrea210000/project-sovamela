@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Savone | Jabones Artesanales</title>
+    <link rel="icon" type="image/x-icon" href="../images/icon.ico">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#645e4b",
+                        "tertiary-fixed": "#ece2c9",
+                        "on-error-container": "#93000a",
+                        "secondary": "#596245",
+                        "on-secondary-fixed-variant": "#424a2f",
+                        "on-surface-variant": "#524345",
+                        "primary-container": "#d18d96",
+                        "on-surface": "#1a1c1a",
+                        "on-background": "#1a1c1a",
+                        "surface-container": "#efeeeb",
+                        "surface-bright": "#faf9f6",
+                        "surface-container-low": "#f4f3f1",
+                        "surface-tint": "#874e56",
+                        "primary-fixed-dim": "#fcb3bc",
+                        "on-primary-fixed": "#360c15",
+                        "surface-container-high": "#e9e8e5",
+                        "tertiary-fixed-dim": "#cfc6ae",
+                        "surface-dim": "#dbdad7",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary-container": "#58272f",
+                        "inverse-surface": "#2f312f",
+                        "on-tertiary-container": "#3b3625",
+                        "primary-fixed": "#ffd9dd",
+                        "outline-variant": "#d6c2c3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#847374",
+                        "background": "#faf9f6",
+                        "inverse-primary": "#fcb3bc",
+                        "on-tertiary-fixed-variant": "#4c4634",
+                        "secondary-fixed-dim": "#c1cba8",
+                        "surface-variant": "#e3e2e0",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#dde7c2",
+                        "on-secondary-fixed": "#171e07",
+                        "on-primary-fixed-variant": "#6b373f",
+                        "tertiary-container": "#a79f89",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary": "#874e56",
+                        "surface": "#faf9f6",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#5f684b",
+                        "secondary-container": "#dde7c2",
+                        "on-tertiary-fixed": "#201b0c",
+                        "inverse-on-surface": "#f2f1ee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "container-max": "1200px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Work Sans"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "label-sm": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface-bright/80 shadow-[0_8px_30px_rgb(135,78,86,0.04)]">
+        <div
+            class="flex justify-between items-center w-full h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="flex items-center gap-4">
+                <div>
+                    <a href="/savone_inicio/Inicio.html"><img src="../images/icon.ico" alt="Savone Logo"
+                            class="w-20 h-20" /></a>
+
+                </div>
+                <span class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary tracking-tight">
+                    <a href="/savone_inicio/Inicio.html">Savone</a>
+                </span>
+            </div>
+            <div class="hidden md:flex flex-1 max-w-xl mx-8 relative">
+                <input
+                    class="w-full bg-surface-container border-none rounded-full px-6 py-2 focus:ring-2 focus:ring-primary/20 text-body-md"
+                    placeholder="Buscar jabones artesanales..." type="text" />
+                <span
+                    class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <nav class="hidden lg:flex gap-8">
+                    <a class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold border-b-2 border-primary"
+                        href="/savone_inicio/Inicio.html">Home</a>
+                    <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300"
+                        href="/savone_productos_por_categor_a/productos.html">Shop</a>
+                    <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300"
+                        href="../savone_acerca_de_nosotros/about_us.html">About</a>
+                </nav>
+                <div class="flex gap-4">
+                    <a class="material-symbols-outlined text-primary text-2xl hover:scale-110 transition-transform"
+                        data-icon="shopping_cart" href="/savone_carrito_de_compras/carrito.html">shopping_cart</a>
+                    <a class="material-symbols-outlined text-primary text-2xl hover:scale-110 transition-transform"
+                        data-icon="person" href="/savone_ingresar_crear_cuenta/cuenta.html">person</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section / Carousel -->
+        <section class="relative w-full h-[870px] overflow-hidden bg-surface-container-low flex items-center">
+            <div
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-12 w-full">
+                <div class="order-2 md:order-1">
+                    <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary mb-4 block">Flor
+                        de Vida</span>
+                    <h1
+                        class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-6 leading-tight">
+                        Cuidado artesanal para tu esencia natural.</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">Jabones orgánicos en
+                        forma de corazón, diseñados para nutrir cada tipo de piel con los ingredientes más puros de la
+                        naturaleza.</p>
+                    <div class="flex gap-4">
+                        <a href="/savone_productos_por_categor_a/productos.html"
+                            class="bg-primary text-on-primary font-body-md px-10 py-4 rounded-full shadow-lg hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all active:scale-95">Ver
+                            Colección</a>
+                        <a href="/savone_acerca_de_nosotros/about_us.html"
+                            class="border-2 border-secondary text-secondary font-body-md px-10 py-4 rounded-full hover:bg-secondary/10 transition-all">Nuestra
+                            Historia</a>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 relative flex justify-center items-center h-full">
+                    <div class="absolute w-[120%] h-[120%] bg-primary-fixed/20 rounded-full blur-3xl -z-10"></div>
+                    <div class="flex gap-4 overflow-x-auto hide-scrollbar snap-x w-full">
+                        <div class="snap-center shrink-0 w-full md:w-auto text-center group cursor-pointer">
+                            <div
+                                class="bg-tertiary-fixed/30 p-8 rounded-[40px] mb-4 transform group-hover:-translate-y-4 transition-transform duration-500 shadow-sm">
+                                <a href="/savone_productos_por_categor_a/productos.html">
+                                    <img class="w-48 h-48 object-cover rounded-[32px] mx-auto shadow-xl"
+                                        data-alt="A luxurious, handcrafted heart-shaped soap bar in a warm cream color resting on a soft textured linen surface. The lighting is diffused and warm, emphasizing the smooth, matte finish of the soap and its detailed floral engraving. The composition is clean and minimalist, set against a palette of soft sand and pale roses, evoking a spa-like feeling of calm and organic luxury."
+                                        src="/images/jabon1.png" />
+                                </a>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface">Hidratación</span>
+                        </div>
+                        <div class="snap-center shrink-0 w-full md:w-auto text-center group cursor-pointer">
+                            <div
+                                class="bg-secondary-container/30 p-8 rounded-[40px] mb-4 transform group-hover:-translate-y-4 transition-transform duration-500 shadow-sm">
+                                <a href="/savone_productos_por_categor_a/productos.html">
+                                    <img class="w-48 h-48 object-cover rounded-[32px] mx-auto shadow-xl cursor-pointer"
+                                        data-alt="A delicate pale sage green heart-shaped artisanal soap with a beautiful botanical imprint. It sits elegantly on a smooth, pale stone surface under soft, natural morning light that creates gentle shadows. The aesthetic is extremely clean and high-end boutique, using a sophisticated color palette of muted greens and off-whites to signify natural firmness and purity."
+                                        src="/images/jabon2.png" />
+                                </a>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface">Firmeza</span>
+                        </div>
+                        <div class="snap-center shrink-0 w-full md:w-auto text-center group cursor-pointer">
+                            <div
+                                class="bg-primary-fixed/30 p-8 rounded-[40px] mb-4 transform group-hover:-translate-y-4 transition-transform duration-500 shadow-sm">
+                                <img class="w-48 h-48 object-cover rounded-[32px] mx-auto shadow-xl"
+                                    data-alt="A vibrant yet soft blush pink soap sculpted into a heart shape, featuring intricate floral designs on its surface. It is placed on a light cream wooden tray, surrounded by a few dried flower petals. High-key, atmospheric lighting creates a bright and airy mood, highlighting the gentle texture and premium artisanal quality of the product in a minimalist setting."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnfTVbEzrUWlg1f_r0bJ-JYumMaxG8rBzMN_D7r1TFUL01I6QPDS_WAD_Vt0TCZfnCmDZj96s9BB8zik9l3qn5pM5hicuVrlZlAZ9fGBkoepF88w6Gt_kLJe6v9V3h3XxbvDt139WiHN_5eW7iy7QqolJgMGrIC7nnc5cZEmPbzlFD7MJIdgiKz_vKoAgFP-oYtIAbBs_y8UxNgwNX7bCV6Ne8EvtVnWvV0D0ctxYn5-RnYVGhSDKcTemopHgPN_ryt3ZTtE_-vOo" />
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface">Antioxidante</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Categories Section -->
+        <section class="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Encuentra
+                    tu match ideal</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">Jabones formulados específicamente para las
+                    necesidades de tu piel.</p>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container-high flex items-end p-6 cursor-pointer">
+                    <a href="/savone_descripcion_jabon/descripcion_jabon_seca.html">
+                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                            data-alt="A serene close-up portrait of a woman with radiant, healthy skin in a soft-focus garden setting. The lighting is warm and golden, capturing a gentle, natural glow that aligns with the brand's organic identity. The color story uses soft beiges and cream tones, creating a tranquil and aspirational visual for the dry skin category."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmBcxLf7IV7HutY_xWdF9tUd9Mk1-tZOD4_vZn-QETLFi7bH9qbOC5ly62RdZFz4k4VJtodtsHe10l5ssb9z43sypvFvhh9Q8juwFipedp_fyAipZEd4_hS483yB7i7KslFkASKjlGAgk58X9XSWDZc3T3j4q_xFcUlWp9xASDwATK8Q6Z1orCnMJW7HY50SMP_Ul_ET5NUBjJRuQTWlfVprfX1yeGKrhiEhTB-AThlRKj9GiYJ8YE942pxKcPyeWLedmBM8zT9a8" />
+                    </a>
+                    <div
+                        class="relative z-10 w-full bg-white/20 backdrop-blur-md p-4 rounded-lg border border-white/30 text-center">
+                        <span class="font-title-md text-title-md text-on-surface-variant">Piel Seca</span>
+                    </div>
+                </div>
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container-high flex items-end p-6 cursor-pointer">
+                    <a href="/savone_descripcion_jabon/descripcion_jabon_grasa.html">
+                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                            data-alt="Artistic macro photography of refreshing water droplets on a clear, clean surface with subtle green reflections. The lighting is bright and cool, evoking a sense of deep cleansing and purification for oily skin. The image uses a minimalist color palette of sage green and crisp whites to reinforce the transparency and effectiveness of the products."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Uus-AT1U6w-wb_GapVC1C2bRkVr5FCei8RxGRg686jLomPoBcbGn9RjwB2IUk-krw7tmJCIDcgtSl9XgnEGQve78Lg9nAikkbiOgSkPCuTLSjaprvq9rrao5YPfJL5hpwoi3Cj53nkw_lW3srrmljodvnbaKeAxJHcD1wyQCOA6NIsTD7aYNxKLFsmH5gHilXU_jSVh6zXkGji9JMn32S5Tx_xxQURup6fv1xAZQWmN3Gyuju4Dj5BEgCbhFT3NbEv3OiV3_cvw" />
+                    </a>
+                    <div
+                        class="relative z-10 w-full bg-white/20 backdrop-blur-md p-4 rounded-lg border border-white/30 text-center">
+                        <span class="font-title-md text-title-md text-on-surface-variant">Piel Grasa</span>
+                    </div>
+                </div>
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container-high flex items-end p-6 cursor-pointer">
+                    <a href="/savone_descripcion_jabon/descripcion_jabon_mixta.html">
+                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                            data-alt="A beautifully balanced composition featuring various botanical elements like dried leaves and lavender stalks on a textured sand-colored background. The lighting is soft and even, creating a calm, editorial feel. The palette focuses on muted earth tones, representing the perfect balance required for mixed skin care in a sophisticated and modern way."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB56diPoMy7HOdwsVGdTzkR9LULnj9OepIbP-oB6qxYWOreJsdykGR3R4A51DN0nMDAqqtRpz3jLyWmTd3qtOBHagg29ZMQY8NX877FDkppCl6Kkgf-9c9_xZBkHpAlUn-5Fpv5QNX7nkhYnG1PQ7L-zKMlnHUosKDJN__JF-Y8xmeX1AMeln2qTN-xqG_yaNPyZriET8PTYyQK62gjn_rO0bwk2NPVrx9QGqwPjTwDqzf4ee9m2TKTekgTm3ijVWiPsFGeEXEmx9M" />
+                    </a>
+                    <div
+                        class="relative z-10 w-full bg-white/20 backdrop-blur-md p-4 rounded-lg border border-white/30 text-center">
+                        <span class="font-title-md text-title-md text-on-surface-variant">Piel Mixta</span>
+                    </div>
+                </div>
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container-high flex items-end p-6 cursor-pointer">
+                    <a href="/savone_descripcion_jabon/descripcion_jabon_sensi.html">
+                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                            data-alt="A delicate and minimalist close-up of a white cotton blossom on a soft, blush pink background. The lighting is extremely gentle, producing a high-key aesthetic that conveys softness and care for sensitive skin. The color scheme is dominated by light pinks and whites, mirroring the brand's sophisticated and gentle apothecary identity."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx4i25cYhngz4PAJKwoLgs_oVOnMpd-ugFsTczTIdeypl4RlfdMwdWCeQbuZQp5CKLaXBhtPbAcKbGFSzaqNhBAVIk_wXYGf3OZgCn7Pjz5968M7yxyRCwM6kIrf1P_UyotHTnvQ77LKnaYfuY1SpZTAJyVqsH-rRRTur-0PeLj_VqGYcJ3XhtYIHaZLX4q7G8Hlvae41-IgA4ImSPgIthqSwHg8QzcOgn8Uiuf-xPpimM5HX4LfVk8VSZ6kWJYrlZ1mIkUdyS3ZQ" />
+                    </a>
+                    <div
+                        class="relative z-10 w-full bg-white/20 backdrop-blur-md p-4 rounded-lg border border-white/30 text-center">
+                        <span class="font-title-md text-title-md text-on-surface-variant">Piel Sensible</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Ingredients Section -->
+        <section class="py-24 bg-tertiary-fixed/20">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">
+                        Ingredientes del Alma</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Solo lo mejor de la tierra para tu
+                        bienestar diario.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    <!-- Ingredient Card -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_8px_32px_rgba(135,78,86,0.03)] text-center hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <div
+                            class="w-16 h-16 bg-primary-fixed/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-primary text-3xl"
+                                data-icon="energy_savings_leaf">energy_savings_leaf</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-2">Vitamina C</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Brillo &amp; Vitalidad
+                        </p>
+                    </div>
+                    <!-- Ingredient Card -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_8px_32px_rgba(135,78,86,0.03)] text-center hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <div
+                            class="w-16 h-16 bg-secondary-container/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-secondary text-3xl"
+                                data-icon="grass">grass</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-2">Avena</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Exfoliación Suave</p>
+                    </div>
+                    <!-- Ingredient Card -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_8px_32px_rgba(135,78,86,0.03)] text-center hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <div
+                            class="w-16 h-16 bg-tertiary-fixed-dim/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-tertiary text-3xl" data-icon="eco">eco</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-2">Aloe Vera</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Calma &amp; Repara</p>
+                    </div>
+                    <!-- Ingredient Card -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_8px_32px_rgba(135,78,86,0.03)] text-center hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <div
+                            class="w-16 h-16 bg-primary-fixed/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-primary text-3xl"
+                                data-icon="local_florist">local_florist</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-2">Caléndula</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Protección Natural</p>
+                    </div>
+                    <!-- Ingredient Card -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_8px_32px_rgba(135,78,86,0.03)] text-center hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <div
+                            class="w-16 h-16 bg-secondary-container/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-secondary text-3xl"
+                                data-icon="water_drop">water_drop</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-2">Aceite de Coco</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Nutrición Profunda</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bento Style Promotion Section -->
+        <section class="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div
+                    class="md:col-span-2 bg-secondary-container rounded-[40px] p-12 flex flex-col justify-center relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="font-display-lg text-headline-lg text-on-secondary-container mb-6">Precio
+                            Lanzamiento: $18.000</h3>
+                        <p class="font-body-lg text-on-secondary-container/80 mb-8 max-w-md">Promoción especial por
+                            tiempo limitado para nuestra primera colección de jabones 'Flor de Vida'.</p>
+                        <a href="/savone_productos_por_categor_a/productos.html"
+                            class="bg-on-secondary-container text-secondary-container font-body-md px-8 py-3 rounded-full hover:scale-105 transition-transform"
+                            href="/savone_compra/compra.html">
+                            Comprar ahora
+                        </a>
+                    </div>
+                    <span
+                        class="material-symbols-outlined absolute -right-16 -bottom-16 text-[240px] text-on-secondary-container/10 rotate-12"
+                        data-icon="redeem">redeem</span>
+                </div>
+                <div
+                    class="bg-primary-fixed rounded-[40px] p-10 text-center flex flex-col items-center justify-center border-4 border-white">
+                    <div class="flex gap-4 mb-6">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <span class="material-symbols-outlined text-pink-600"
+                                data-icon="photo_camera">photo_camera</span>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <span class="material-symbols-outlined text-blue-600" data-icon="facebook">Note</span>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <span class="material-symbols-outlined text-green-600" data-icon="chat">chat</span>
+                        </div>
+                    </div>
+                    <h4 class="font-title-md text-on-primary-fixed mb-4">¡Síguenos y pide el tuyo!</h4>
+                    <p class="font-body-md text-on-primary-fixed-variant opacity-80">Atención personalizada por
+                        Instagram, WhatsApp y Facebook.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter Section -->
+        <section class="py-24 bg-surface-container-high border-y border-outline-variant/30">
+            <div class="max-w-2xl mx-auto px-margin-mobile text-center">
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Únete a
+                    nuestra comunidad</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-10">Recibe consejos de cuidado de la piel
+                    y contenido educativo directamente en tu correo.</p>
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input
+                        class="flex-1 bg-surface-container-lowest border-outline rounded-full px-8 py-4 focus:ring-2 focus:ring-primary/20 text-body-md"
+                        placeholder="Tu correo electrónico" type="email" />
+                    <a href="/savone_ingresar_crear_cuenta/cuenta.html"
+                        class="bg-primary text-on-primary font-body-md px-10 py-4 rounded-full shadow-md hover:bg-primary/90 transition-all">Suscribirse</a>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-16 bg-tertiary-fixed text-on-tertiary-fixed">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="lg:col-span-1">
+                <span class="font-display-lg text-primary text-headline-lg mb-4 block">Savone</span>
+                <p class="font-body-md text-on-tertiary-fixed-variant max-w-xs">Jabones artesanales creados con amor y
+                    respeto por la naturaleza.</p>
+            </div>
+            <div>
+                <h4 class="font-title-md mb-6">Navegación</h4>
+                <ul class="space-y-4 font-body-md text-on-tertiary-fixed-variant">
+                    <li><a class="hover:text-primary transition-colors"
+                            href="/savone_acerca_de_nosotros/about_us.html">Our Story</a></li>
+                    <li><a class="hover:text-primary transition-colors"
+                            href="/savone_ingredientes/ingredientes.html">Ingredients</a></li>
+                    <li><a class="hover:text-primary transition-colors"
+                            href="/savone_sostenibilidad/sostenibilidad.html">Sustainability</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-title-md mb-6">Soporte</h4>
+                <ul class="space-y-4 font-body-md text-on-tertiary-fixed-variant">
+                    <li><a class="hover:text-primary transition-colors" href="/savone_envios/envios.html">Shipping</a>
+                    </li>
+                    <li><a class="hover:text-primary transition-colors"
+                            href="/savone_contacto/contacto.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-title-md mb-6">Encuéntranos</h4>
+                <p class="font-body-md text-on-tertiary-fixed-variant mb-4">Venta en ferias y eventos universitarios.
+                </p>
+                <div class="flex gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform"
+                        data-icon="public">public</span>
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform"
+                        data-icon="share">share</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 pt-8 border-t border-on-tertiary-fixed/10 text-center">
+            <p class="font-label-sm text-label-sm text-on-tertiary-fixed-variant">© 2024 Savone Artisanal. Handcrafted
+                with Care.</p>
+        </div>
+    </footer>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-10px_40px_rgba(0,0,0,0.03)] flex justify-around items-center py-3 px-4 pb-safe-bottom">
+        <a class="flex flex-col items-center justify-center text-primary font-bold bg-primary-fixed/20 rounded-full px-4 py-1"
+            href="#">
+            <span class="material-symbols-outlined" data-icon="home"
+                style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="font-label-sm text-[10px] uppercase tracking-widest mt-1">Home</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-secondary opacity-70"
+            href="/savone_productos_por_categor_a/productos.html">
+            <span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+            <span class="font-label-sm text-[10px] uppercase tracking-widest mt-1">Shop</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-secondary opacity-70" href="#">
+            <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+            <span class="font-label-sm text-[10px] uppercase tracking-widest mt-1">Cart</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-secondary opacity-70" href="#">
+            <span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+            <span class="font-label-sm text-[10px] uppercase tracking-widest mt-1">Account</span>
+        </a>
+    </nav>
+</body>
+
+</html>

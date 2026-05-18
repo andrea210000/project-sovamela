@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Savone - Iniciar Sesión</title>
+    <link rel="icon" type="image/x-icon" href="../images/icon.ico">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#645e4b",
+                        "tertiary-fixed": "#ece2c9",
+                        "on-error-container": "#93000a",
+                        "secondary": "#596245",
+                        "on-secondary-fixed-variant": "#424a2f",
+                        "on-surface-variant": "#524345",
+                        "primary-container": "#d18d96",
+                        "on-surface": "#1a1c1a",
+                        "on-background": "#1a1c1a",
+                        "surface-container": "#efeeeb",
+                        "surface-bright": "#faf9f6",
+                        "surface-container-low": "#f4f3f1",
+                        "surface-tint": "#874e56",
+                        "primary-fixed-dim": "#fcb3bc",
+                        "on-primary-fixed": "#360c15",
+                        "surface-container-high": "#e9e8e5",
+                        "tertiary-fixed-dim": "#cfc6ae",
+                        "surface-dim": "#dbdad7",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary-container": "#58272f",
+                        "inverse-surface": "#2f312f",
+                        "on-tertiary-container": "#3b3625",
+                        "primary-fixed": "#ffd9dd",
+                        "outline-variant": "#d6c2c3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#847374",
+                        "background": "#faf9f6",
+                        "inverse-primary": "#fcb3bc",
+                        "on-tertiary-fixed-variant": "#4c4634",
+                        "secondary-fixed-dim": "#c1cba8",
+                        "surface-variant": "#e3e2e0",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#dde7c2",
+                        "on-secondary-fixed": "#171e07",
+                        "on-primary-fixed-variant": "#6b373f",
+                        "tertiary-container": "#a79f89",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary": "#874e56",
+                        "surface": "#faf9f6",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#5f684b",
+                        "secondary-container": "#dde7c2",
+                        "on-tertiary-fixed": "#201b0c",
+                        "inverse-on-surface": "#f2f1ee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "container-max": "1200px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Work Sans"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "label-sm": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .form-focus:focus {
+            outline: none;
+            border-color: #874e56;
+            box-shadow: 0 0 0 4px rgba(135, 78, 86, 0.1);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background font-body-md text-on-background min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+    <main
+    
+        class="min-h-screen flex items-center justify-center relative p-margin-mobile md:p-margin-desktop overflow-hidden">
+        <!-- Abstract Background Textures -->
+        <div class="absolute top-0 left-0 w-full h-full -z-10 opacity-40">
+            
+            <div
+                class="absolute -top-[10%] -left-[5%] w-[400px] h-[400px] rounded-full bg-primary-fixed/30 blur-[100px]">
+            </div>
+            <div
+                class="absolute top-[60%] -right-[10%] w-[500px] h-[500px] rounded-full bg-secondary-fixed/20 blur-[120px]">
+            </div>
+        </div>
+        <!-- Main Authentication Container -->
+        <div
+            class="w-full max-w-[1000px] flex flex-col md:flex-row glass-panel rounded-xl shadow-[0_32px_64px_-16px_rgba(135,78,86,0.12)] overflow-hidden">
+            <!-- Left Side: Login Form -->
+            <div class="w-full md:w-1/2 p-10 lg:p-16 flex flex-col justify-center bg-surface-container-lowest/50">
+                <div class="mb-10 text-center md:text-left">
+                    
+                    <h1
+                        class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary tracking-tight mb-2">
+                        Savone</h1>
+                    <p class="font-title-md text-title-md text-on-surface-variant">Flor de vida</p>
+                </div>
+                <div class="space-y-6">
+                    <div class="space-y-2">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface">Bienvenido de nuevo</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Ingresa tus datos para continuar
+                            con tu bienestar.</p>
+                    </div>
+                    <!-- Social Login Section -->
+                    <div class="flex gap-4 items-center justify-start py-2">
+                        <button
+                            class="flex-1 flex items-center justify-center gap-2 py-3 px-4 border border-outline-variant rounded-xl font-label-sm text-on-surface-variant hover:bg-surface-container-low transition-all duration-300">
+                            <img alt="Instagram" class="w-5 h-5"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdqH6Jb-w8w45xtZSXc8K9gLNid0MlJEeJJxs3DYSL7PaA9sfj6f05JhNyGqGpuFn3vU-INXsG7GTfhw0mIrV25UXMXI3iOI69_DgcdtILm-nrB9QczBjavx3534WLvcFlVi3jCnOCxuwjhS1CALuKl-SxNlVhLQ6OmMeZC336ydBr7D8_fKZZsRjTsxSHOUokiv8SMj5Jp-bnc5RQLo8eBzgZgrKEmq4_7kqk2th_YSOO0lbCYVrC7K50lCYFiL8kkyoaZFg4w34" />
+                            Instagram
+                        </button>
+                        <button
+                            class="flex-1 flex items-center justify-center gap-2 py-3 px-4 border border-outline-variant rounded-xl font-label-sm text-on-surface-variant hover:bg-surface-container-low transition-all duration-300">
+                            <img alt="Facebook" class="w-5 h-5"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzPfib7T5ZKGc2VDbEMhE37BEvZ81v31EGuwtLvCKIlshUgM6qPZ4u0Md4kO0TmqGYahB45GTGNPacfZzKc14rAITfSiqkTcu-X_2osN9YlCD6mHCvykx5xtPS7xzQzw1QC_FezPfkmfu_sorrUWCEksqLs3CqkdjFEoSjQkshIWlwaqSoFY2sGIOQTdaE6stvngepuC9Vy6CLLviCk3_2E_4LcksyyBRNbkgdqp_ch5rZla9uez5ySri8BynUwFyCdfFdAWzE5-E" />
+                            Facebook
+                        </button>
+                    </div>
+                    <div class="relative flex items-center justify-center py-4">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-outline-variant"></div>
+                        </div>
+                        <span class="relative px-4 bg-white text-label-sm text-outline uppercase tracking-widest">o con
+                            tu correo</span>
+                    </div>
+                    <form action="#" class="space-y-4">
+                        <div class="space-y-1">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider"
+                                for="email">Correo Electrónico</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-xl border border-outline-variant bg-surface-bright/50 font-body-md text-body-md text-on-surface placeholder:text-outline-variant form-focus transition-all"
+                                id="email" placeholder="ejemplo@savone.com" type="email" />
+                        </div>
+                        <div class="space-y-1">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider"
+                                for="password">Contraseña</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-xl border border-outline-variant bg-surface-bright/50 font-body-md text-body-md text-on-surface placeholder:text-outline-variant form-focus transition-all"
+                                id="password" placeholder="••••••••" type="password" />
+                        </div>
+                        <div class="flex items-center justify-between py-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary"
+                                    type="checkbox" />
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">Recordarme</span>
+                            </label>
+                            <a class="font-label-sm text-label-sm text-primary hover:underline" href="#">¿Olvidaste tu
+                                contraseña?</a>
+                        </div>
+                        <button
+                            class="w-full bg-primary text-white font-title-md text-title-md py-4 rounded-full shadow-[0_12px_24px_rgba(135,78,86,0.15)] hover:shadow-[0_16px_32px_rgba(135,78,86,0.25)] hover:scale-[1.01] active:scale-[0.98] transition-all duration-300"
+                            type="submit">
+                            Iniciar Sesión
+                        </button>
+                    </form>
+                    <p class="md:hidden text-center font-body-md text-on-surface-variant pt-4">
+                        ¿No tienes una cuenta? <a class="text-primary font-semibold" href="#">Regístrate aquí</a>
+                    </p>
+                </div>
+            </div>
+            <!-- Right Side: Promotional / Register Switch -->
+            <div
+                class="hidden md:flex w-1/2 relative bg-primary-fixed/40 overflow-hidden p-16 flex-col justify-between items-center text-center">
+                <!-- Decorative background image with data-alt -->
+                <div class="absolute inset-0 -z-10">
+                    <img class="w-full h-full object-cover mix-blend-overlay opacity-60"
+                        data-alt="A high-end, editorial flat lay of artisanal heart-shaped soaps in soft pastel shades of blush pink, sage green, and cream. The soaps have detailed botanical engravings and rest on a textured, neutral-toned linen surface. Soft, warm morning light creates gentle shadows, evoking a sense of calm, luxury, and organic wellness. The composition is spacious and minimalist, highlighting the pure ingredients and handcrafted quality of Savone soaps."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_TZi9fFu96-kTU4ZfsPEkOdR5rHr8s5R0lltpGETY_Wxz4auKurowz3UCrk6LPokxKJy46w_odIYpcF-Fj9QRiccfUQCdfXMBzzG5QxmP2Q1qX9D1ZKFJZUkW3JI4hlhDlYa1JgV9pvVGn99ea6vPQ-9PQZvMo2eBYbE2g9cCYFhJ-zu3gXyjIHZbUnoVZJGkinJUtC0HTtXWaQyftbanEYRdt54Qb9BCFN7C00NqCmqp9q-G-mJSV3ZUpU6pVfTi9zdhnDJS9tY" />
+                </div>
+                <div class="space-y-4">
+                    <img class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-white shadow-xl"
+                        data-alt="Close-up of a delicate pink cherry blossom flower, mimicking the Savone brand logo. The lighting is ethereal and soft, emphasizing the translucent petals and intricate details of the flower. The background is a dreamy, blurred mix of cream and soft pink tones, creating a sophisticated and natural atmosphere consistent with premium botanical skincare branding."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRwwK4IXFtUO5fUuagQhJDfBc-RTODws7_L4fxJ9jhoAizroP894sEHyZWz5gxpVTkfdin8IrLWujkxItFqAFK5N31vbFtH0KjXNdNi6TjM5mnQHBcLAqJUX9zoRUkan1GlI45huLOF7eeMTwEGKEwAl-vZWzKufVtpkC5cdfn6iNPtZBX24rcnixSDtQSuWoNBom8v_RyXZm1Oh8Mk4uSklKy3OKHSMj6VT1az36L_RT3OpTfXq4Gt6XfWLWXW3i-7zxu3j__aXA" />
+                    <h3 class="font-headline-lg text-headline-lg text-on-primary-container">¿Eres nuevo aquí?</h3>
+                    <p class="font-body-lg text-body-lg text-on-primary-fixed-variant max-w-xs mx-auto">Únete a nuestra
+                        comunidad y descubre el arte de la limpieza consciente.</p>
+                </div>
+                <div class="space-y-8 w-full max-w-sm">
+                    <div class="grid grid-cols-1 gap-4 text-left">
+                        <div class="flex items-center gap-3 bg-white/40 p-4 rounded-xl backdrop-blur-md">
+                            <span class="material-symbols-outlined text-primary" data-icon="auto_awesome"></span>
+                            <span class="font-label-sm text-on-surface">Jabones artesanales únicos</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white/40 p-4 rounded-xl backdrop-blur-md">
+                            <span class="material-symbols-outlined text-primary" data-icon="eco"></span>
+                            <span class="font-label-sm text-on-surface">Ingredientes 100% orgánicos</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-surface-container-lowest/80 text-primary border border-primary/20 font-title-md text-title-md py-4 rounded-full hover:bg-white transition-all duration-300">
+                        Crear una Cuenta
+                    </button>
+                </div>
+                <div class="text-label-sm text-on-primary-fixed-variant/70 italic">
+                    © 2024 Savone Artisanal. Handcrafted with Care.
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Support Link Floating -->
+    <div class="fixed bottom-margin-mobile right-margin-mobile md:bottom-margin-desktop md:right-margin-desktop z-50">
+        <a class="group flex items-center gap-2 bg-secondary-container text-on-secondary-container px-5 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            href="#">
+            <span class="material-symbols-outlined text-secondary" data-icon="chat_bubble"></span>
+            <span class="font-label-sm uppercase tracking-widest hidden md:inline">¿Necesitas ayuda?</span>
+        </a>
+    </div>
+</body>
+
+</html>

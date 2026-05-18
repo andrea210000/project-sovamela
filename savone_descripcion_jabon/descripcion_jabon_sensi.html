@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Savone - Jabón Piel Sensible</title>
+    <link rel="icon" type="image/x-icon" href="../images/icon.ico">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Work+Sans:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#4c4634",
+                        "tertiary-fixed": "#ece2c9",
+                        "surface-container-high": "#e9e8e5",
+                        "outline-variant": "#d6c2c3",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#ffd9dd",
+                        "surface-dim": "#dbdad7",
+                        "surface-tint": "#874e56",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#a79f89",
+                        "on-surface-variant": "#524345",
+                        "surface-bright": "#faf9f6",
+                        "background": "#faf9f6",
+                        "secondary": "#596245",
+                        "secondary-fixed": "#dde7c2",
+                        "secondary-container": "#dde7c2",
+                        "outline": "#847374",
+                        "inverse-surface": "#2f312f",
+                        "surface-container": "#efeeeb",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#171e07",
+                        "inverse-primary": "#fcb3bc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1a",
+                        "on-tertiary-fixed": "#201b0c",
+                        "on-primary-fixed": "#360c15",
+                        "inverse-on-surface": "#f2f1ee",
+                        "on-background": "#1a1c1a",
+                        "tertiary-fixed-dim": "#cfc6ae",
+                        "primary-container": "#d18d96",
+                        "primary": "#874e56",
+                        "on-primary-fixed-variant": "#6b373f",
+                        "surface-variant": "#e3e2e0",
+                        "secondary-fixed-dim": "#c1cba8",
+                        "error-container": "#ffdad6",
+                        "surface": "#faf9f6",
+                        "on-secondary-fixed-variant": "#424a2f",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#58272f",
+                        "on-tertiary-container": "#3b3625",
+                        "on-secondary-container": "#5f684b",
+                        "tertiary": "#645e4b",
+                        "primary-fixed-dim": "#fcb3bc",
+                        "surface-container-low": "#f4f3f1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-md": ["Work Sans"],
+                        "title-md": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "headline-lg-mobile": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .masonry-gradient {
+            background: linear-gradient(180deg, transparent 0%, rgba(135, 78, 86, 0.03) 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Top Navigation Bar -->
+    <header
+        class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface-bright/80 shadow-[0_8px_30px_rgb(135,78,86,0.04)]">
+        <div
+            class="flex justify-between items-center w-full h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="flex items-center gap-4">
+                <div>
+                    <a href="/savone_inicio/Inicio.html"><img src="../images/icon.ico" alt="Savone Logo"
+                            class="w-20 h-20" /></a>
+
+                </div>
+                <span class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary tracking-tight">
+                    <a href="/savone_inicio/Inicio.html">Savone</a>
+                </span>
+            </div>
+            <div class="hidden md:flex flex-1 max-w-xl mx-8 relative">
+                <input
+                    class="w-full bg-surface-container border-none rounded-full px-6 py-2 focus:ring-2 focus:ring-primary/20 text-body-md"
+                    placeholder="Buscar jabones artesanales..." type="text" />
+                <span
+                    class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <nav class="hidden lg:flex gap-8">
+                    <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300"
+                        href="/savone_inicio/Inicio.html">Home</a>
+                    <a class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold border-b-2 border-primary"
+                        href="/savone_productos_por_categor_a/productos.html">Shop</a>
+                    <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300"
+                        href="/savone_acerca_de_nosotros/about_us.html">About</a>
+                </nav>
+                <div class="flex gap-4">
+                    <a class="material-symbols-outlined text-primary text-2xl hover:scale-110 transition-transform"
+                        data-icon="shopping_cart" href="/savone_carrito_de_compras/carrito.html">shopping_cart</a>
+                    <a class="material-symbols-outlined text-primary text-2xl hover:scale-110 transition-transform"
+                        data-icon="person" href="/savone_ingresar_crear_cuenta/cuenta.html">person</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <!-- Product Hero Section -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+            <!-- Image Gallery Cluster -->
+            <div class="md:col-span-7 grid grid-cols-1 gap-gutter">
+                <div
+                    class="rounded-xl overflow-hidden shadow-2xl bg-surface-container-low aspect-square relative group">
+                    <img alt="Jabón de Avena y Miel"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="/images/piel_sensible.png" />
+                    <div class="absolute top-6 left-6">
+                        <span
+                            class="bg-secondary/10 backdrop-blur-md text-secondary px-4 py-1.5 rounded-full font-label-sm uppercase tracking-widest">Artesanal</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Details -->
+            <div class="md:col-span-5 flex flex-col space-y-8">
+                
+                <div class="space-y-4">
+                    <h1 class="font-display-lg text-display-lg text-on-surface leading-tight">Jabón de Arcilla Rosa y Jazmín del Mediterráneo</h1>
+                    <p class="text-title-md font-title-md text-primary">$18.000</p>
+                </div>
+                <div class="bg-tertiary-fixed/30 p-6 rounded-xl border border-tertiary-fixed-dim/20">
+                    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Pensado especialmente para el cuidado de pieles sensibles o maduras, cuenta con una base sumamente suave de aceite de almendras y manteca de cacao. Su tonalidad rosa viejo y mate se obtiene de forma 100% natural gracias a la inclusión de arcilla rosa francesa, rica en oligoelementos que limpian sin resecar. Está enriquecido con extracto puro de flores de jazmín y aceite esencial de hojas de olivo, proporcionando un aroma floral sofisticado, empolvado y profundamente relajante que evoca los jardines mediterráneos.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Beneficios
+                        Principales</h3>
+                    <ul class="grid grid-cols-1 gap-3">
+                        <li class="flex items-center space-x-3 text-body-md text-on-surface-variant">
+                            <span class="material-symbols-outlined text-secondary"
+                                data-icon="local_florist">local_florist</span>
+                            <span>Hidratación intensiva duradera</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-body-md text-on-surface-variant">
+                            <span class="material-symbols-outlined text-secondary"
+                                data-icon="shield_with_heart">shield_with_heart</span>
+                            <span>Restaura la barrera natural de la piel</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-body-md text-on-surface-variant">
+                            <span class="material-symbols-outlined text-secondary" data-icon="eco">eco</span>
+                            <span>Ingredientes 100% naturales</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-body-md text-on-surface-variant">
+                            <span class="material-symbols-outlined text-secondary" data-icon="favorite">favorite</span>
+                            <span>Artesanía en forma de corazón</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Purchase Controls -->
+                <div class="pt-6 flex flex-col space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center border border-outline-variant rounded-full px-4 py-2 space-x-6">
+                            <button class="text-on-surface-variant hover:text-primary transition-colors"><span
+                                    class="material-symbols-outlined">remove</span></button>
+                            <span class="font-body-lg w-4 text-center">1</span>
+                            <button class="text-on-surface-variant hover:text-primary transition-colors"><span
+                                    class="material-symbols-outlined">add</span></button>
+                        </div>
+                        <button
+                            class="flex-1 bg-primary text-on-primary font-body-md py-4 px-8 rounded-full shadow-lg hover:bg-on-primary-fixed-variant transition-all duration-300 transform active:scale-95">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        <!-- Ingredient Story Specialty Component -->
+        <div
+            class="mt-24 rounded-2xl overflow-hidden flex flex-col md:flex-row bg-surface-container-low border border-outline-variant/30">
+            <div class="md:w-1/2 aspect-[4/3] md:aspect-auto">
+                <img class="w-full h-full object-cover"
+                    data-alt="Overhead shot of handcrafted artisanal soaps arranged on a rustic wooden board with scattered rose petals and honey dippers. Warm, golden sunlight filters through a window creating a cozy, high-end boutique atmosphere."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAbTbL7BTgU0TxAqppvN8O595JYjkHymej9tTHmYzaLs9fBtBXiwq2LW-ogxTUA7hzn1NXW_8ABMDV0BppFJ48tuGPQfSqs3qNZ1BlR8s3E1QlTUDm8auEeTl87SLXVjjB9FxzrFGHqx9Uhr5mFS2f0xJ0bLuB4dEfPvWCuTtdjnEBgUF8PBqtx-f5iV8doPqmO9cEd8BJAjjyNYpCZwUor4Eug367OLKcc5Maze0FFwd-bTlDVorqqPWjI-L1JwiH6LiLVUnQKF4" />
+            </div>
+            <div class="md:w-1/2 p-12 flex flex-col justify-center space-y-6">
+                <h2 class="font-display-lg text-display-lg text-primary">Nuestra Promesa Pura</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant italic">
+                    "Creemos que el cuidado personal debe ser un ritual de conexión con la naturaleza. Cada Jabón
+                    Corazón es vertido a mano, respetando el tiempo de curado natural para preservar las propiedades de
+                    cada ingrediente."
+                </p>
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="h-12 w-12 rounded-full border border-primary flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined" data-icon="verified" data-weight="fill">verified</span>
+                    </div>
+                    <div>
+                        <p class="font-title-md text-title-md text-on-surface">Certificado Orgánico</p>
+                        <p class="text-label-sm text-on-surface-variant">Ingredientes de comercio justo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-16 bg-tertiary-fixed text-on-tertiary-fixed">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="lg:col-span-1">
+                <span class="font-display-lg text-primary text-headline-lg mb-4 block">Savone</span>
+                <p class="font-body-md text-on-tertiary-fixed-variant max-w-xs">Jabones artesanales creados con amor y
+                    respeto por la naturaleza.</p>
+            </div>
+            <div>
+                <h4 class="font-title-md mb-6">Navegación</h4>
+                <ul class="space-y-4 font-body-md text-on-tertiary-fixed-variant">
+                    <li><a class="hover:text-primary transition-colors" href="/savone_acerca_de_nosotros/about_us.html">Our Story</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/savone_ingredientes/ingredientes.html">Ingredients</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/savone_sostenibilidad/sostenibilidad.html">Sustainability</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-title-md mb-6">Soporte</h4>
+                <ul class="space-y-4 font-body-md text-on-tertiary-fixed-variant">
+                    <li><a class="hover:text-primary transition-colors" href="/savone_envios/envios.html">Shipping</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/savone_contacto/contacto.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-title-md mb-6">Encuéntranos</h4>
+                <p class="font-body-md text-on-tertiary-fixed-variant mb-4">Venta en ferias y eventos universitarios.
+                </p>
+                <div class="flex gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform"
+                        data-icon="public">public</span>
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform"
+                        data-icon="share">share</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 pt-8 border-t border-on-tertiary-fixed/10 text-center">
+            <p class="font-label-sm text-label-sm text-on-tertiary-fixed-variant">© 2024 Savone Artisanal. Handcrafted
+                with Care.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
